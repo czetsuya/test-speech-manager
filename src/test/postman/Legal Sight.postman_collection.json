@@ -1,0 +1,710 @@
+{
+	"info": {
+		"_postman_id": "a8967e86-f641-47ac-9d9d-af5380419084",
+		"name": "Legal Sight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Init Data",
+			"item": [
+				{
+					"name": "Create speech 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Store 1\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"speechId1\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"We shall go on to the end, we shall fight in France, we shall fight on the seas and oceans, we shall fight with growing confidence and growing strength in the air, we shall defend our Island, whatever the cost may be, we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender\",\r\n    \"author\": \"Winston Churchill\",\r\n    \"keywords\": \"war,fight\",\r\n    \"dateOfSpeech\": \"1940-06-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/speeches",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"speeches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create speech 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Store 2\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"speechId2\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"I believe that in the history of the world, there has not been a more genuinely democratic struggle for freedom than ours.\",\r\n    \"author\": \"Mahatma Gandhi\",\r\n    \"keywords\": \"quit india\",\r\n    \"dateOfSpeech\": \"1942-08-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/speeches",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"speeches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create speech 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Store 3\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"speechId3\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, 'Because it is there,' Kennedy said in his speech. Well, space is there, and we're going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there. And, therefore, as we set sail we ask God's blessing on the most hazardous and dangerous and greatest adventure on which man has ever embarked.\",\r\n    \"author\": \"John F. Kennedy\",\r\n    \"keywords\": \"go to moon\",\r\n    \"dateOfSpeech\": \"1961-05-25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/speeches",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"speeches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create speech 4 - dummy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Your test name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.environment.set(\"dummyId\", jsonData.id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"dummy\",\r\n    \"author\": \"dummy\",\r\n    \"keywords\": \"dummy\",\r\n    \"dateOfSpeech\": \"1961-05-25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/speeches",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"speeches"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List speeches",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData._embedded.speechDtoes.length).to.eql(4);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get speech 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Compare author\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.author).to.eql(\"Winston Churchill\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{speechId1}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{speechId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update speech dummy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"The heady feeling of freedom\",\r\n    \"author\": \"Edward Legaspi\",\r\n    \"keywords\": \"Test\",\r\n    \"dateOfSpeech\": \"2021-02-19\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/speeches/{{dummyId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{dummyId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get speech updated",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Compare author\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.author).to.eql(\"Edward Legaspi\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{dummyId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{dummyId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Compare author\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData._embedded.speechDtoes[0].author).to.eql(\"Edward Legaspi\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/search?author=Edward",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"search"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Edward"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search date range",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData._embedded.speechDtoes.length).to.eql(2);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/search?fromDate=1940-01-01&toDate=1942-12-12",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "1940-01-01"
+						},
+						{
+							"key": "toDate",
+							"value": "1942-12-12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search keyword",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Compare author\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData._embedded.speechDtoes[0].author).to.eql(\"Edward Legaspi\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/search?keyword=test",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search text",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData._embedded.speechDtoes.length).to.eql(2);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/search?text=freedom",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"search"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "freedom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Share speech",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailTo\": \"czetsuya@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/speeches/{{dummyId}}/share",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{dummyId}}",
+						"share"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete speech dummy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{dummyId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{dummyId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get speech deleted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{dummyId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{dummyId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete speech 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{speechId1}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{speechId1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete speech 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{speechId2}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{speechId2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete speech 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/speeches/{{speechId3}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"speeches",
+						"{{speechId3}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
