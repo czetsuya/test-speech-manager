@@ -1,4 +1,8 @@
 version: '3'
+
+networks:
+  backend:
+
 services:
   spring:
     container_name: speech_service
@@ -8,11 +12,13 @@ services:
     ports:
     - 8080:8080
     depends_on:
-      - postgres
+      - db
+    networks:
+      - backend
 
-  postgres:
-    image: postgres:10
-    container_name: postgres
+  db:
+    image: postgres:13
+    container_name: speech_postgres_13
     ports:
       - 5432:5432
     environment:
@@ -21,3 +27,5 @@ services:
       - POSTGRES_USER=dev
       - POSTGRES_PASSWORD=dev
       - POSTGRES_PORT=5432
+    networks:
+      - backend
