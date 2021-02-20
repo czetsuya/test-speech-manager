@@ -27,14 +27,11 @@ The application is running on port 8080 by default.
 
 Before building docker, make sure to build the project first by running mvn install.
 
-A docker file is also available for building an image:
+To run the application and PostgreSQL in docker, open a command prompt and go to the projects root directory.
 
 ```shell
-docker build -t czetsuyatech/speech-manager -f docker/Dockerfile .
-docker run -d -p 8080:8080 czetsuyatech/speech-manager
+docker-compose up
 ```
-
-The application should now be running on port 8080.
 
 ## Testing
 

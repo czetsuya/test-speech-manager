@@ -1,10 +1,20 @@
 version: '3'
 services:
+  spring:
+    container_name: speech_service
+    build:
+      context: .
+      dockerfile: src/docker/Dockerfile
+    ports:
+    - 8080:8080
+    depends_on:
+      - postgres
+
   postgres:
     image: postgres:10
     container_name: postgres
     ports:
-      - "5432:5432"
+      - 5432:5432
     environment:
       - LC_ALL=C.UTF-8
       - POSTGRES_DB=speeches
