@@ -11,23 +11,23 @@ This application provides speech management features:
 
 ## Tech
 
-It provides REST API running on top of Spring Boot 2 framework. It integrates Mapstruct library for entity-dto conversion and Lombok for automatic getter/setter generation.
+This project exposes REST API running on top of Spring Boot 2 framework. It integrates Mapstruct library for entity-dto conversion and Lombok for automatic getter/setter generation.
 
 ## Deployment
 
-To run the application, simply clone this project and execute the command below in the terminal inside the root directory.
+To run the application, simply clone this project and execute the command below in the terminal inside the project's root directory.
 
 ```shell
 mvn spring-boot:run
 ```
 
-The application is running on port 8080 by default.
+The application should be running on port 8080 by default.
 
 ## Docker Container
 
-Before building docker, make sure to build the project first by running mvn install.
+Before building the docker container, make sure to build the project first by running mvn install.
 
-To run the application and PostgreSQL in docker, open a command prompt and go to the projects root directory.
+To run the application and PostgreSQL in docker, open a command prompt and go to the project's root directory.
 
 ```shell
 docker-compose up
@@ -35,7 +35,7 @@ docker-compose up
 
 ## Testing
 
-The integration tests using Mockito can be run via maven (development-h2 profile must be use):
+The integration tests are created using Mockito and can be run via maven (development-h2 profile must be use):
 
 ```shell
 mvn clean test -P development-h2
