@@ -1,3 +1,5 @@
+*If you would like to support these tutorials, you can contribute to my [Patreon account](https://patreon.com/czetsuya)
+
 # Speech Manager
 
 This application provides speech management features:
